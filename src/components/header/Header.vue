@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import IconToggle from '@/assests/icons/IconToggle.vue'
+import IconOpen from '@/assests/icons/IconOpen.vue'
 import Menu from './Menu.vue'
 import { ref } from 'vue'
+import IconClose from '@/assests/icons/IconClose.vue'
 
 const isOpenMenu = ref(false)
 </script>
@@ -9,7 +10,11 @@ const isOpenMenu = ref(false)
 <template>
   <header>
     <p>● Bridge Collective</p>
-    <IconToggle class="icon" @click="isOpenMenu = !isOpenMenu" />
+    <component
+      :is="isOpenMenu ? IconClose : IconOpen"
+      class="icon"
+      @click="isOpenMenu = !isOpenMenu"
+    />
   </header>
   <Menu :isOpen="isOpenMenu" />
 </template>
