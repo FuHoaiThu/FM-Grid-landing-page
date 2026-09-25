@@ -1,6 +1,6 @@
 <script setup>
 import GridContent from './components/GridContent.vue'
-import Header from './components/Header.vue'
+import Header from '@/components/header/Header.vue'
 </script>
 
 <template>
