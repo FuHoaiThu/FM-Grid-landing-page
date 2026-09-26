@@ -64,6 +64,12 @@ const cards = [
       font-size: 60px;
       padding-bottom: 40px;
     }
+    p {
+      font-size: 17px;
+      font-weight: 400px;
+      line-height: 165%;
+      color: $color-blue-200;
+    }
   }
 }
 </style>
