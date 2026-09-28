@@ -48,6 +48,7 @@ const props = defineProps({
   right: 0;
   width: 100vw;
   height: 100vh;
+  top: 73px;
 }
 .menu ul {
   width: fit-content;

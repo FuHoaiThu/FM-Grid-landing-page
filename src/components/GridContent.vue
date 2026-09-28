@@ -71,5 +71,12 @@ const cards = [
       color: $color-blue-200;
     }
   }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    .hero {
+      grid-column: span 2;
+      min-height: 536px;
+    }
+  }
 }
 </style>
