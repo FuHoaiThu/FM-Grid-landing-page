@@ -12,5 +12,10 @@ footer {
   padding: 26px 48px;
   font-size: 14px;
   line-height: 142%;
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
 }
 </style>

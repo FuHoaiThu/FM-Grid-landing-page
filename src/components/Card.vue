@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
       <component :is="card.icon" />
-      <p>{{ card.value }}</p>
+      <p data-test="card-header-title">{{ card.value }}</p>
     </div>
     <div class="card-content">
       <p class="card-content__title">{{ card.title }}</p>
@@ -47,6 +47,9 @@ const props = defineProps({
       color: $color-blue-200;
       font-weight: 400;
     }
+  }
+  @media screen and (max-width: 425px) {
+    padding: 24px;
   }
 }
 </style>
