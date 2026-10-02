@@ -13,6 +13,7 @@ const isOpenMenu = ref(false)
     <component
       :is="isOpenMenu ? IconClose : IconOpen"
       class="icon"
+      data-test="toggle"
       @click="isOpenMenu = !isOpenMenu"
     />
   </header>

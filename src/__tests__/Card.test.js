@@ -10,11 +10,13 @@ describe('Card', () => {
   it('should render statistic information correctly', () => {
     const wrapper = mount(Card, {
       props: {
-        id: 0,
-        icon: TestIcon,
-        value: '24M',
-        title: 'Students reached',
-        description: 'Across 31 countries since 2011.',
+        card: {
+          id: 0,
+          icon: TestIcon,
+          value: '24M',
+          title: 'Students reached',
+          description: 'Across 31 countries since 2011.',
+        },
       },
     })
     const cardTitle = wrapper.find('[data-test="card-header-title"]')

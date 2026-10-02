@@ -2,10 +2,10 @@
   <div class="card">
     <div class="card-header">
       <component :is="card.icon" />
-      <p data-test="card-header-title">{{ card.value }}</p>
+      <p>{{ card.value }}</p>
     </div>
     <div class="card-content">
-      <p class="card-content__title">{{ card.title }}</p>
+      <p data-test="card-header-title" class="card-content__title">{{ card.title }}</p>
       <p class="card-content__des">{{ card.description }}</p>
     </div>
   </div>

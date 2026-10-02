@@ -1,8 +1,8 @@
 <template>
   <section class="wrapper">
     <div class="col hero">
-      <h1>A classroom for every child.</h1>
-      <p>
+      <h1 data-test="hero-heading">A classroom for every child.</h1>
+      <p data-test="hero-description">
         We fund the schools, train the teachers, and measure what works — so every child we reach
         today becomes a graduate tomorrow.
       </p>
