@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <p>© 2026 Bridge Collective</p>
-    <p>Registered charity 12345678</p>
+    <p data-test="copyright">© 2026 Bridge Collective</p>
+    <p data-test="charity">Registered charity 12345678</p>
   </footer>
 </template>
 <style lang="scss" scoped>

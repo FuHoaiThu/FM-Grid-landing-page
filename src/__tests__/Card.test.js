@@ -23,8 +23,4 @@ describe('Card', () => {
 
     expect(cardTitle.text()).toBe('Students reached')
   })
-
-  it('should render the icon', () => {
-    // TODO
-  })
 })

@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 
 import Menu from '@/components/header/Menu.vue'
-import Header from '@/components/header/Header.vue'
 
 describe('Menu', () => {
   it('should render all navigation items', async () => {
