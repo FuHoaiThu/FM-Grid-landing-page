@@ -1,44 +1,84 @@
-# .
+# Bridge Collective — Grid Landing Page
 
-This template should help get you started developing with Vue 3 in Vite.
+A responsive landing page built with **Vue 3** as a Frontend Mentor practice project.
 
-## Recommended IDE Setup
+The project focuses on reusable Vue components, CSS Grid, responsive design, interactive navigation, and unit testing.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tech Stack
 
-## Recommended Browser Setup
+- Vue 3 (Composition API)
+- Vite
+- JavaScript and SCSS
+- CSS Grid and Flexbox
+- Vitest and Vue Test Utils
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Features
 
-## Customize configuration
+- Responsive landing page for desktop, tablet, and mobile
+- Four statistic cards rendered from an array of data
+- Reusable `Card` component with dynamic SVG icons
+- Navigation menu with open/close interaction and slide transition
+- Component-level unit tests
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Project Structure
 
-## Project Setup
-
-```sh
-npm install
+```text
+src/
+├── components/
+│   ├── header/
+│   │   ├── Header.vue
+│   │   └── Menu.vue
+│   ├── Card.vue
+│   ├── GridContent.vue
+│   └── Footer.vue
+├── __tests__/
+│   ├── Card.test.js
+│   ├── Content.test.js
+│   ├── Header.test.js
+│   ├── Menu.test.js
+│   └── Footer.test.js
+├── assests/
+│   ├── icons/
+│   └── scss/
+└── App.vue
 ```
 
-### Compile and Hot-Reload for Development
+## Getting Started
 
-```sh
+Use a Node.js version compatible with the project's `package.json`.
+
+```bash
+npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+To build the project:
 
-```sh
+```bash
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Unit Tests
 
-```sh
+The tests cover rendering, statistic card props, navigation items, and menu visibility interactions.
+
+```bash
+# Watch mode
 npm run test:unit
+
+# Run tests once
+npm run test:unit:run
 ```
+
+## Learning Goals
+
+- Organize a Vue application into focused components
+- Pass structured data through props
+- Render collections with `v-for` and stable keys
+- Manage local reactive state with `ref`
+- Animate conditional content with Vue `<Transition>`
+- Write behavior-focused tests with Vitest and Vue Test Utils
+
+## Notes
+
+This is a learning project based on a Frontend Mentor design challenge.

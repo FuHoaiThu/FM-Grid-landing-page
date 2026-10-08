@@ -5,7 +5,7 @@
       <p>{{ card.value }}</p>
     </div>
     <div class="card-content">
-      <p class="card-content__title">{{ card.title }}</p>
+      <p data-test="card-header-title" class="card-content__title">{{ card.title }}</p>
       <p class="card-content__des">{{ card.description }}</p>
     </div>
   </div>
@@ -47,6 +47,9 @@ const props = defineProps({
       color: $color-blue-200;
       font-weight: 400;
     }
+  }
+  @media screen and (max-width: 425px) {
+    padding: 24px;
   }
 }
 </style>

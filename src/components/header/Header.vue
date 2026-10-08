@@ -9,10 +9,11 @@ const isOpenMenu = ref(false)
 
 <template>
   <header>
-    <p>● Bridge Collective</p>
+    <p data-test="brand">● Bridge Collective</p>
     <component
       :is="isOpenMenu ? IconClose : IconOpen"
       class="icon"
+      data-test="toggle"
       @click="isOpenMenu = !isOpenMenu"
     />
   </header>

@@ -1,6 +1,6 @@
 <template>
   <Transition name="menu">
-    <div class="menu" v-if="isOpen">
+    <div class="menu" data-test="menu" v-if="isOpen">
       <ul>
         <li v-for="menu in MENUS" :key="menu.id">
           {{ menu.title }}
@@ -48,6 +48,7 @@ const props = defineProps({
   right: 0;
   width: 100vw;
   height: 100vh;
+  top: 73px;
 }
 .menu ul {
   width: fit-content;

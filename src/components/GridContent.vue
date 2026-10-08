@@ -1,8 +1,8 @@
 <template>
   <section class="wrapper">
     <div class="col hero">
-      <h1>A classroom for every child.</h1>
-      <p>
+      <h1 data-test="hero-heading">A classroom for every child.</h1>
+      <p data-test="hero-description">
         We fund the schools, train the teachers, and measure what works — so every child we reach
         today becomes a graduate tomorrow.
       </p>
@@ -60,15 +60,38 @@ const cards = [
   .hero {
     padding: 48px;
     grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     h1 {
       font-size: 60px;
       padding-bottom: 40px;
     }
     p {
       font-size: 17px;
-      font-weight: 400px;
+      font-weight: 400;
       line-height: 165%;
       color: $color-blue-200;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    .hero {
+      grid-column: span 2;
+      min-height: 536px;
+    }
+  }
+  @media screen and (max-width: 475px) {
+    grid-template-columns: 1fr;
+    .hero {
+      grid-row: span 1;
+      grid-column: span 1;
+      min-height: 342px;
+      padding: 32px;
+      h1 {
+        font-size: 44px;
+      }
     }
   }
 }
