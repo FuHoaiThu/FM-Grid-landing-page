@@ -10,12 +10,17 @@ const isOpenMenu = ref(false)
 <template>
   <header>
     <p data-test="brand">● Bridge Collective</p>
-    <component
-      :is="isOpenMenu ? IconClose : IconOpen"
-      class="icon"
+    <button
+      type="button"
+      class="menu-toggle"
       data-test="toggle"
+      :aria-expanded="isOpenMenu"
+      aria-controls="mobile-navigation"
+      :aria-label="isOpenMenu ? 'Close menu' : 'Open menu'"
       @click="isOpenMenu = !isOpenMenu"
-    />
+    >
+      <component :is="isOpenMenu ? IconClose : IconOpen" aria-hidden="true" />
+    </button>
   </header>
   <Menu :isOpen="isOpenMenu" />
 </template>
@@ -32,8 +37,11 @@ header {
   p {
     font-size: 14px;
   }
-  .icon {
-    cursor: pointer;
-  }
+}
+.menu-toggle {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 </style>

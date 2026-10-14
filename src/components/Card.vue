@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <component :is="card.icon" />
+      <component :is="card.icon" aria-hidden="true" />
       <p>{{ card.value }}</p>
     </div>
     <div class="card-content">

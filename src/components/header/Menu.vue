@@ -1,12 +1,20 @@
 <template>
   <Transition name="menu">
-    <div class="menu" data-test="menu" v-if="isOpen">
+    <nav
+      class="menu"
+      data-test="menu"
+      v-if="isOpen"
+      id="mobile-navigation"
+      aria-label="Main navigation"
+    >
       <ul>
         <li v-for="menu in MENUS" :key="menu.id">
-          {{ menu.title }}
+          <a :href="menu.href">
+            {{ menu.title }}
+          </a>
         </li>
       </ul>
-    </div>
+    </nav>
   </Transition>
 </template>
 <script setup>
@@ -14,22 +22,27 @@ const MENUS = [
   {
     id: 0,
     title: 'About',
+    href: '#about',
   },
   {
     id: 1,
     title: 'OurWork',
+    href: '#our-work',
   },
   {
     id: 2,
     title: 'Partners',
+    href: '#partners',
   },
   {
     id: 3,
     title: 'Annual Report',
+    href: '#annual-report',
   },
   {
     id: 4,
     title: 'Donate',
+    href: '#donate',
   },
 ]
 const props = defineProps({
@@ -63,11 +76,12 @@ const props = defineProps({
 .menu .menu--open {
   right: 0;
 }
-.menu ul li {
+.menu ul li a {
   list-style: none;
   font-size: 32px;
   line-height: 1.6;
   color: $color-neutral-0;
+  text-decoration: none;
 }
 .menu-enter-active ul,
 .menu-leave-active ul {
