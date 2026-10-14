@@ -76,8 +76,10 @@ const props = defineProps({
 .menu .menu--open {
   right: 0;
 }
-.menu ul li a {
+.menu ul li {
   list-style: none;
+}
+.menu ul li a {
   font-size: 32px;
   line-height: 1.6;
   color: $color-neutral-0;
